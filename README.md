@@ -11,3 +11,8 @@ Some regular expressions to use in find and replacer on editors
   - Regex: function\s(\w+)\(\)\s+?{}
   - Replace: var $1 = {};
   - Ex.: function Foo() {}  -->  var Foo = {};
+
+### Const function attribution to function definition.
+  - Regex: const\s(\w+)\s?=\s?(\(.+\))\s?=>\s?{
+  - Replace: function $1$2 {
+  - Ex.: function Foo() {}  -->  var Foo = {};
