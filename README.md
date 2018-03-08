@@ -1,5 +1,5 @@
 # Regex-Editors
-Some regular expressions to use in find and replacers on editors
+Some regular expressions to use in find and replacer on editors
 
 ## JavaScript
 ### Object attribution to define property.
