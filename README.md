@@ -16,3 +16,16 @@ Some regular expressions to use in find and replacer on editors
   - Regex: const\s(\w+)\s?=\s?(\(.+\))\s?=>\s?{
   - Replace: function $1$2 {
   - Ex.: function Foo() {}  -->  var Foo = {};
+
+### String template to Concatanation.
+  - Regex: \${(.+?)}
+  - Replace: " + $1 + "
+  - Ex.: ${CCToolkit.getServiceUrl()}getimagedatastring?session=${CCToolkit.getSessionId()}&imageID=3  -->  " + CCToolkit.getServiceUrl() + "getimagedatastring?session=" + CCToolkit.getSessionId() + "&imageID=3"
+  
+### Enclosing string template to Normal enclosing string.
+  - Regex: `(.+?)`
+  - Replace: "$1"
+  - Ex.: `tttatsdgsdgdsg`  -->  "tttatsdgsdgdsg"
+
+#### String Template to String
+  - myStr.replace(/\${(.+?)}/gi, '" + $1 + "').replace(/`(.+?)`/gi, "$1")
