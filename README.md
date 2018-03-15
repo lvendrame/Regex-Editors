@@ -23,9 +23,9 @@ Some regular expressions to use in find and replacer on editors
   - Ex.: ${CCToolkit.getServiceUrl()}getimagedatastring?session=${CCToolkit.getSessionId()}&imageID=3  -->  " + CCToolkit.getServiceUrl() + "getimagedatastring?session=" + CCToolkit.getSessionId() + "&imageID=3"
   
 ### Enclosing string template to Normal enclosing string.
-  - Regex: `(.+?)`
+  - Regex: \`(.+?)\`
   - Replace: "$1"
-  - Ex.: `tttatsdgsdgdsg`  -->  "tttatsdgsdgdsg"
+  - Ex.: \`tttatsdgsdgdsg\`  -->  "tttatsdgsdgdsg"
 
 #### String Template to String
-  - myStr.replace(/\${(.+?)}/gi, '" + $1 + "').replace(/`(.+?)`/gi, "$1")
+  - myStr.replace(/\${(.+?)}/gi, '" + $1 + "').replace(/\`(.+?)\`/gi, "$1")
