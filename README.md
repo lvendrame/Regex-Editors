@@ -18,7 +18,7 @@ Some regular expressions to use in find and replacer on editors
   - Ex.: function Foo() {}  -->  var Foo = {};
 
 ### String template to Concatanation.
-  - Regex: \${(.+?)}
+  - Regex: \\${(.+?)}
   - Replace: " + $1 + "
   - Ex.: ${CCToolkit.getServiceUrl()}getimagedatastring?session=${CCToolkit.getSessionId()}&imageID=3  -->  " + CCToolkit.getServiceUrl() + "getimagedatastring?session=" + CCToolkit.getSessionId() + "&imageID=3"
   
