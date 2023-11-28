@@ -9,15 +9,15 @@ Some regular expressions to use in find and replacer on editors
 
 ### Function definition to var object attribution.
   - Regex: function\s(\w+)\(\)\s+?{}
-  - Replace: var $1 = {};
-  - Ex.: function Foo() {}  -->  var Foo = {};
+  - Replace: const $1 = {};
+  - Ex.: function Foo() {}  -->  const Foo = {};
 
 ### Const function attribution to function definition.
   - Regex: const\s(\w+)\s?=\s?(\(.+\))\s?=>\s?{
   - Replace: function $1$2 {
-  - Ex.: function Foo() {}  -->  var Foo = {};
+  - Ex.: const Foo = {}  -->  function Foo() {};
 
-### String template to Concatanation.
+### String template to Concatenation.
   - Regex: \\${(.+?)}
   - Replace: " + $1 + "
   - Ex.: ${CCToolkit.getServiceUrl()}getimagedatastring?session=${CCToolkit.getSessionId()}&imageID=3  -->  " + CCToolkit.getServiceUrl() + "getimagedatastring?session=" + CCToolkit.getSessionId() + "&imageID=3"
